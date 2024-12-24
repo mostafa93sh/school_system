@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Classrooms\ClassroomController;
 use App\Http\Controllers\Grades\GradeController ;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -24,5 +25,6 @@ Route::group(
 
         Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
         Route::resource('/grades',GradeController::class)->names('grades');
+        Route::resource('/classrooms',ClassroomController::class)->names('Classrooms');
     });
     
